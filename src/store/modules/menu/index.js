@@ -21,7 +21,7 @@ const state = {
         link: 'ClassTable.vue',
         icon: ['fas', 'table']
       },
-      components: lazyLoader('Home')
+      components: lazyLoader('ClassTable')
     },
     {
       name: 'Grade',
@@ -31,17 +31,17 @@ const state = {
         link: 'Grade.vue',
         icon: ['fas', 'graduation-cap']
       },
-      components: lazyLoader('Home')
+      components: lazyLoader('Grade')
     },
     {
       name: 'Setting',
       path: '/setting',
       meta: {
         label: '設定',
-        link: 'cog.vue',
-        icon: ['fas', 'home']
+        link: 'Setting.vue',
+        icon: ['fas', 'cog']
       },
-      components: lazyLoader('Home')
+      components: lazyLoader('Setting')
     }
   ]
 }
