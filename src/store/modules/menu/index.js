@@ -12,6 +12,36 @@ const state = {
         icon: ['fas', 'home']
       },
       components: lazyLoader('Home')
+    },
+    {
+      name: 'ClassTabel',
+      path: '/class',
+      meta: {
+        label: '課表',
+        link: 'ClassTabel.vue',
+        icon: ['fas', 'table']
+      },
+      components: lazyLoader('Home')
+    },
+    {
+      name: 'Grade',
+      path: '/grade',
+      meta: {
+        label: '成績',
+        link: 'Grade.vue',
+        icon: ['fas', 'graduation-cap']
+      },
+      components: lazyLoader('Home')
+    },
+    {
+      name: 'Setting',
+      path: '/setting',
+      meta: {
+        label: '設定',
+        link: 'cog.vue',
+        icon: ['fas', 'home']
+      },
+      components: lazyLoader('Home')
     }
   ]
 }
