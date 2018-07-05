@@ -7,7 +7,7 @@ const state = {
       name: 'Home',
       path: '/',
       meta: {
-        label: ['主頁面'],
+        label: '主頁面',
         link: 'Home.vue',
         icon: ['fas', 'home']
       },
