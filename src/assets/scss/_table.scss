@@ -17,6 +17,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @media screen and (max-width: 720px) {
+      transform: scale(.8);
+    }
+    @media screen and (max-width: 520px) {
+      transform: scale(.6);
+    }
+    @media screen and (max-width: 414px) {
+      transform: scale(.6);
+    }
+    @media screen and (max-width: 375px) {
+      transform: scale(.57);
+    }
   }
   &-time {
     grid-area: time;
