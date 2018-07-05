@@ -3,6 +3,7 @@
 @import 'font';
 
 @import 'menu';
+@import 'table';
 
 #app {
   width: 100%;
@@ -12,4 +13,7 @@
   flex-direction: column;
   overflow: hidden;
   background-color: $white;
+  .container {
+    height: calc(100vh - 3rem);
+  }
 }

@@ -1,0 +1,75 @@
+.table {
+  display: grid;
+  grid-template-areas: "spam week" "time inner";
+  grid-template-columns: 4rem 1fr;
+  grid-template-rows: 2rem 1fr;
+  grid-gap: 3pt;
+  background-color: $light;
+  border: 3pt $light solid;
+  margin: 1rem;
+  &-spam {
+    grid-area: spam;
+  }
+  &-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &-time {
+    grid-area: time;
+    grid-template-rows: 4rem 4rem 4rem 4rem 4rem 4rem 4rem 4rem 4rem 4rem;
+    grid-template-columns: 1fr;
+  }
+  &-week {
+    grid-area: week;
+    grid-template-rows: 1fr;
+    grid-template-columns: 7rem 7rem 7rem 7rem 7rem;
+  }
+  &-inner {
+    grid-area: inner;
+    grid-template-rows: 4rem 4rem 4rem 4rem 4rem 4rem 4rem 4rem 4rem 4rem;
+    grid-template-columns: 7rem 7rem 7rem 7rem 7rem;
+  }
+  &-inner, &-time, &-week, &-spam {
+    display: grid;
+    grid-gap: 3pt;
+    .course {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      background-color: $white;
+      line-height: 1.2;
+      &.shadow {
+        background-color: rgba($white, .5);
+      }
+      h3 {
+        font-size: 12pt;
+        text-align: center;
+        margin: 2pt 0;
+      }
+      p {
+        font-size: 10pt;
+        color: $content;
+      }
+    }
+  }
+  &-week, &-spam {
+    .course {
+      background-color: $tone;
+      p {
+        color: $white;
+      }
+    }
+  }
+  &-time {
+    .course {
+      background-color: rgba($tone, .2);
+    }
+  }
+}

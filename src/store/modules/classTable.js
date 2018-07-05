@@ -8,8 +8,8 @@ const state = {
 const actions = {
   async getClassTable ({ commit }, { id, year, sem }) {
     try {
-      const hasCache = state.classTable.filter(e => (e.year === year && e.sem === sem))
-      if (hasCache) return hasCache.data
+      const cache = state.classTable.filter(e => (e.year === year && e.sem === sem))
+      if (cache.length > 0) return [...cache.map(e => (e.data))][0]
       const res = await axios.get(`https://uscapi.aries0d0f.me/classtable/${id}/${year}/${sem}`)
       if (!res.data) throw new Error(res.err)
       const data = {
@@ -18,7 +18,7 @@ const actions = {
         sem,
         data: res.data
       }
-      commit(types.CLASS_TABEL, data)
+      commit(types.CLASS_TABLE, data)
       return res.data
     } catch (err) {
       throw new Error(err)
@@ -27,8 +27,8 @@ const actions = {
 }
 
 const mutations = {
-  [types.CLASS_TABEL] (state, data) {
-    state.classTable = data
+  [types.CLASS_TABLE] (state, data) {
+    state.classTable.push(data)
   }
 }
 
