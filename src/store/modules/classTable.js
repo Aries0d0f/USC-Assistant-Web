@@ -2,15 +2,15 @@ import axios        from 'axios'
 import * as types   from '../mutation-types'
 
 const state = {
-  classTabel: []
+  classTable: []
 }
 
 const actions = {
-  async getClassTabel ({ commit }, { id, year, sem }) {
+  async getClassTable ({ commit }, { id, year, sem }) {
     try {
-      const hasCache = state.classTabel.filter(e => (e.year === year && e.sem === sem))
+      const hasCache = state.classTable.filter(e => (e.year === year && e.sem === sem))
       if (hasCache) return hasCache.data
-      const res = await axios.get(`https://uscapi.aries0d0f.me/classtabel/${id}/${year}/${sem}`)
+      const res = await axios.get(`https://uscapi.aries0d0f.me/classtable/${id}/${year}/${sem}`)
       if (!res.data) throw new Error(res.err)
       const data = {
         id,
@@ -28,7 +28,7 @@ const actions = {
 
 const mutations = {
   [types.CLASS_TABEL] (state, data) {
-    state.classTabel = data
+    state.classTable = data
   }
 }
 

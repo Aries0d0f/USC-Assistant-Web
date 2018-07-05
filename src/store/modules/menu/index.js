@@ -14,11 +14,11 @@ const state = {
       components: lazyLoader('Home')
     },
     {
-      name: 'ClassTabel',
+      name: 'ClassTable',
       path: '/class',
       meta: {
         label: '課表',
-        link: 'ClassTabel.vue',
+        link: 'ClassTable.vue',
         icon: ['fas', 'table']
       },
       components: lazyLoader('Home')
