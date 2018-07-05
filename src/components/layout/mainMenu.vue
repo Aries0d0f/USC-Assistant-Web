@@ -19,14 +19,10 @@
 </template>
 
 <script>
-  import { mapGetters } from 'vuex'
-  export default {
-    computed: {
-      ...mapGetters({ menu: 'menuitems' })
-    }
+import { mapGetters } from 'vuex'
+export default {
+  computed: {
+    ...mapGetters({ menu: 'menuItem' })
   }
+}
 </script>
-
-<style scoped>
-
-</style>
